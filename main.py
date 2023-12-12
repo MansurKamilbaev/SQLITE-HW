@@ -3,7 +3,8 @@ import sqlite3
 conn = sqlite3.connect('mydatabase.db')
 sql = conn.cursor()
 
-sql.execute('CREATE TABLE IF NOT EXISTS students (id INTEGER PRIMARY KEY, name TEXT, age INTEGER, grade TEXT);')
+sql.execute('CREATE TABLE IF NOT EXISTS students (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, age INTEGER, '
+            'grade TEXT);')
 
 
 # sql.execute('INSERT INTO students (name,age,grade) VALUES ("Arman",17,"D")')
